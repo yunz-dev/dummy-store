@@ -2,7 +2,7 @@ import express from 'express'
 import { connectDB } from './config/db.js';
 import productRoutes from "./routes/product.route.js"
 
-const port = 5000;
+const port = process.env.SERVER_PORT || 5000;
 const app = express();
 
 app.use(express.json()); //middle ware to accept json data in req.body
